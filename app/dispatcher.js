@@ -2,7 +2,7 @@ var guid = require('guid');
 var listeners = {};
 
 module.exports = {
-  register: function (cb) {
+  register: function (callback) {
     var id = guid.raw();
     listeners[id] = callback;
     return id;

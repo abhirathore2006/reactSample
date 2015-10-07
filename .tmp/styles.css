@@ -2,3 +2,27 @@
     text-decoration: line-through;
     color: saddlebrown;
 }
+
+body {
+    padding-top: 3rem;
+}
+
+.purchased-false {
+    height: 40px;
+    background-color: red;
+}
+
+.purchased-true {
+    height: 40px;
+    background-color: green;
+}
+
+h1 {
+    text-decoration: underline;
+    color: slategray;
+}
+
+.grocery-addItem {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
