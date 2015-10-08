@@ -9,7 +9,6 @@ module.exports = React.createClass({
     this.setState({input: e.target.value});
   },
   addItem: function (e) {
-    debugger;
     e.preventDefault();
     action.add({
       name: this.state.input

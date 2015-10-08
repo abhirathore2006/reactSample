@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "browser-sync": "^2.9.8",
     "browserify": "^11.2.0",
     "express": "^4.13.3",
     "guid": "0.0.12",
     "gulp": "^3.9.0",
     "gulp-live-server": "0.0.28",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.1.10",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
