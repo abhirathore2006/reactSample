@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var LiveServer = require('gulp-live-server');
-var browerSync = require('browser-sync');
+var browserSync = require('browser-sync');
 var browserify = require('browserify');
 var reactify = require('reactify');
 var source = require('vinyl-source-stream');
@@ -11,10 +11,10 @@ gulp.task('live-server', function () {
 });
 
 gulp.task('serve', ['bundle', 'live-server'], function () {
-  browerSync.init(null, {
+  browserSync.init(null, {
     browser: ["chrome"],
     proxy: "http://localhost:7777",
-    prot: 9001
+    port: 9001
   })
 });
 

@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var GroceryItem = require('./models/GroceryItems.js');
 
 mongoose.connect('mongodb://localhost/grocery', function () {
+    console.log("connected.");
   mongoose.connection.db.dropDatabase();
 
   var items = [
