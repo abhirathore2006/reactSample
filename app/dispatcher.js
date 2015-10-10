@@ -9,7 +9,6 @@ module.exports = {
   },
   dispatch: function (payload) {
     console.info("Dispatching...", payload);
-    debugger;
     for (var id in listeners) {
       var listener = listeners[id];
       listener(payload);

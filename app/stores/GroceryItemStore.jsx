@@ -38,13 +38,9 @@ function GroceryItemStore() {
   }
 
   function setGroceryItemBought(item, isBought) {
-    var _item = items.filter(function (a) {
-      return a.name === item.name
-    })[0];
-
     item.purchased = isBought || false;
     triggerListeners();
-    helper.patch('api/items/' + item._id, items);
+    helper.patch('api/items/' + item._id, item);
   }
 
   function onChange(listener) {
@@ -58,7 +54,6 @@ function GroceryItemStore() {
   }
 
   dispatcher.register(function (event) {
-    debugger;
     var split = event.type.split(':');
     if (split[0] === 'grocery-item') {
       switch (split[1]) {

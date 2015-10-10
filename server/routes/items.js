@@ -8,7 +8,6 @@ module.exports = function (app) {
       });
     })
     .post(function (req, res) {
-      debugger;
       var item = req.body;
       var groceryItem = new GroceryItem(item);
       groceryItem.save(function (error, data) {
@@ -24,10 +23,16 @@ module.exports = function (app) {
       });
     })
     .patch(function (req, res) {
+      console.log(req.body);
+
+      console.log("@@@@@@@@@@@@@@@@@@@");
+      console.log(req.body._id);
+
       GroceryItem.findOne({
         _id: req.body._id
       }, function (error, doc) {
         console.log(error);
+        console.log(doc);
         for (var key in req.body) {
           doc[key] = req.body[key];
         }

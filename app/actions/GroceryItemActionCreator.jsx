@@ -14,15 +14,12 @@ module.exports = {
     })
   },
   buy: function (item) {
-    debugger;
     dispatcher.dispatch({
       payload: item,
       type: 'grocery-item:buy'
     })
   },
   unbuy: function (item) {
-    debugger;
-
     dispatcher.dispatch({
       payload: item,
       type: 'grocery-item:unbuy'
